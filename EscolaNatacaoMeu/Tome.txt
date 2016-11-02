@@ -1,0 +1,18 @@
+int BuscarRaiaLivreNoPeriodo(bool *ptrVetLivreOcup, int nPeriodo, int nQtRaiasPiscina)
+{
+	int i;
+	for(i = (nPeriodo-1)*nQtRaiasPiscina; i < ((nPeriodo-1)*nQtRaiasPiscina) + QTDE_RAIAS_DA_PISCINA || *ptrVetLivreOcup == true ; i++, ptrVetLivreOcup++)
+	{
+		cout << i << "\t";
+		cout << "Raia " << i - ((nPeriodo-1)*nQtRaiasPiscina) + 1;
+		if(*ptrVetLivreOcup == false)
+		{
+			cout << ": LIVRE" << endl;
+		}
+		else
+		{
+			cout << ": OCUPADO" << endl;
+		}
+	}
+	PAUSA;
+	return 0;						// ???? para não dar erro de compilação
